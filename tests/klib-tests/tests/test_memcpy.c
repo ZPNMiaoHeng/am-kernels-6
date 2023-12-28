@@ -37,7 +37,7 @@ void test_memcpy() {
     for (r = l + 1; r <= N; r ++) {
       reset();
       uint8_t val = (l + r) / 2;
-      printf("%d\t%d\t%d\n", l, r, val);
+      // printf("%d\t%d\t%d\n", l, r, val);
       if(r - l + val > N) {
         break;
       }
@@ -52,14 +52,15 @@ void test_memcpy() {
 int main(const char *args) {
   // test_memcpy();
   // l =10 r=12 val = 11
-  reset();
-  printf_data();
-  memcpy(data + 10, data + 11, 2);
-  printf_data();
-  check_seq(0, 10, 1);
-  check_seq(10, 12, 12);
-  check_seq(12, N, 12 + 1);
-  // Assert(1,"hello");
+  // reset();
+  // printf_data();
+  // memcpy(data + 10, data + 11, 2);
+  // printf_data();
+  // check_seq(0, 10, 1);
+  // check_seq(10, 12, 12);
+  // check_seq(12, N, 12 + 1);
+  
+  // assert(0);
   test_memcpy();
 
   return 0;
